@@ -1,0 +1,91 @@
+.login-card, .sign-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    form{
+        width: 100%;
+        p{
+            text-align: center;
+            margin: 20px 0 0 0;
+        }
+    }
+}
+
+h1{
+    font-size: 2em;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    margin: 35px 0 10px 0;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        border-radius: 100px;
+        background: #fff;
+        bottom: -5px;
+    }
+    input{
+        width: 90%;
+        height: 40px;
+        border: none;
+        background: transparent;
+        outline: none;
+        font-size: 18px;
+        &:focus + label span , &:valid + label span{
+            top: -20px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+    }
+    input + label{
+        i{
+            margin: 10px 0 10px 10px;
+        }
+        span{
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+            transition: 0.3s;
+            top: 5px;
+            margin-left: 5px;
+        }
+    }
+}
+
+input[type=submit]{
+    width: 100%;
+    height: 50px;
+    border-radius: 100px;
+    font-size: 1.2em;
+    background: #fa709a;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+    &:hover{
+        transition: 0.3s;
+        box-shadow: 0 0 30px #fa709985;
+        border: 1px solid #fa709a;
+        background: rgb(244, 244, 244);
+        color: #fa709a;
+    }
+}
+
+.help-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+label:has(.password-icon){
+    cursor: pointer;
+}
